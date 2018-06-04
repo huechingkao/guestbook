@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views import generic
+from django import forms
 from .models import Message
+from .forms import MessageForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 class MessageListView(generic.ListView):
@@ -11,8 +13,9 @@ class MessageDetailView(generic.DetailView):
     model = Message
     
 class MessageCreate(CreateView):
-    model = Message
-    fields = ['user', 'subject', 'content']
+    # model = Message
+    # fields = ['user', 'subject', 'content']
+    form_class = MessageForm
     success_url = "/"   
     template_name = 'form.html'      
     

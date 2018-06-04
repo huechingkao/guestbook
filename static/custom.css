@@ -1,0 +1,9 @@
+.list-group-item>a.text-danger {visibility: hidden}
+.list-group-item:hover>a.text-danger {visibility: visible}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
